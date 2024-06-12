@@ -1,0 +1,56 @@
+{% extends "layout.html"%}
+
+{%block title%}
+
+{% endblock%}
+
+{% block signin %}
+<li class = "nav-item">
+    <a class="nav-link active" aria-current="page">{{email}}</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/logout">Logout</a>
+</li>
+
+  {{message}}
+
+
+{% endblock %}
+
+{% block body %}
+
+<div class = "float-container">
+    <div class="container1 float-child">
+        <div class="td-box">
+            <h2>Todo list</h2>
+            <div class="roww">
+                <input  id="todo-input" type="text" placeholder="Type here" name = "input">
+                <button type="submit"id = "todo-btn" class = "text-dark" ;">Add</button>
+            </div>
+            <ul id = "list-container">
+                {% for todo in todos %}
+                <li class="list-itm td-itm" >{{todo[0]}} <span id = "dlt-todo"> &times; </span></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="container1 float-child">
+        <div class="td-box">
+            <h2>Tracker</h2>
+            <ul id = "list-container">
+                {% if (todos == []) %}
+                    <li class="tra-itm">Add tasks to track Them</li>
+                {% else %}
+                    {% for todo in todos %}
+                    <div class ="tra-container">
+                        <li class="tra-itm" >{{todo[0]}}<button type = "button" id = "clock">0:0:0</button></li>
+                        <button type="submit"id = "timer-btn" class = "text-dark timer-btn" ;>Start timer</button>
+                    </div>
+                    {% endfor %}
+
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

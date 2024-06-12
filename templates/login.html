@@ -1,0 +1,31 @@
+{% extends "layout.html"%}
+
+{%block title%}
+login
+{% endblock%}
+
+{% block body%}
+<br>
+
+<form action = "/login" method="POST">
+  <div class="form-floating mb-3 centerdiv " >
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
+      <label for="floatingInput" >Email address</label>
+    </div>
+    <div class="form-floating centerdiv text-center">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+      <label for="floatingPassword">Password</label>
+      {{message}}
+      <br>
+      <button type="submit" class="btn btn-primary" style="margin: auto;" >Sign in</button>
+    </div>
+    <br>
+</form>
+<form action = "/register" method="GET">
+    <div class="form-floating centerdiv text-center">
+      <br>
+      <button type="submit" class="btn btn-primary" style="margin: auto;" >Register</button>
+    </div>
+    <br>
+</form>
+{% endblock %}

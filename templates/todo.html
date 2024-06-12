@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+ Todo    
+{% endblock %}
+
+{% block body %}
+
+<div class="container1">
+    <div class="td-box">
+        <h2>Todo list</h2>
+        <div class="roww">
+            <input  id="todo-input" type="text" placeholder="Type here">
+            <button id = "todo-btn" class = "text-dark" onclick="add_todo();">Add</button>
+        </div>
+        <ul id = "list-container">
+            <li class="list-itm checked">asdf</li>
+
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
