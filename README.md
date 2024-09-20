@@ -1,5 +1,4 @@
 # TaskMaster
-#### Video Demo:  <[URL HERE](https://youtu.be/XEamtXnFh60)>
 #### Description:
 So, TaskMaster is basically a todolist web app that can also track the time you spend on each individual task,made using html,bootstrap,javascript on the front end and flask on the backend and sql database for the data storage, it has a simple UI and is very easy to use.
 
