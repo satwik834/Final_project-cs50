@@ -62,7 +62,7 @@ this table is used to store all the todos. it contains three columns
 
 
 
-### design chices
+### design choices
 At the beginning of this project i have considered using firebase as a backend for this project but considering the scope of this project and the need to focus on the core functionality at the early stage i have decided to just use a local sql database for this project.however, in future iterations of this project i could see myself using firebase or any other Baas(backend as a service) products
 
 
